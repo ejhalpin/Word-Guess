@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Chelsea+Market&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <title>Rick and Morty - Hangman</title>
+  </head>
+  <body>
+    <header>
+      <span class="emphasis">Hangman</span>
+    </header>
+
+    <div class="container">
+      <section class="aside">
+        <span class="block solution" id="solution"></span>
+        <iframe id="video" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
+      </section>
+
+      <section class="game-zone" id="game-zone">
+        <div class="margin" id="message">Press any key to get started <br /><i id="keyboard-icon" class="fas fa-keyboard" onclick="doLayout()"></i></div>
+        <div class="margin">Current Clue</div>
+        <div class="margin expand" id="word">&nbsp;</div>
+        <div class="margin">Number of guesses remaining <span class="block" id="guesses-remaining">12</span></div>
+        <div class="margin">Letters already guessed <span id="letters-guessed"></span></div>
+        <div class="margin">Wins: <span id="wins">0</span></div>
+      </section>
+      <div class="flex-keyboard" id="keyboard"></div>
+    </div>
+    <!-- <button onclick="clearPage()">text</button> -->
+    <script type="text/javascript" src="assets/javascript/word-guess.js"></script>
+  </body>
+</html>
