@@ -1,0 +1,137 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #252525;
+  font-family: "Patrick Hand SC", cursive;
+  color: #f5f5f5;
+  margin: 0;
+}
+
+.container {
+  flex: 1 0 auto;
+  margin: 40px auto 0;
+  width: 960px;
+  box-sizing: border-box;
+  border-right: 2px solid #12b0c9;
+  border-left: 2px solid #12b0c9;
+}
+
+.responsive-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex: 1 0 auto;
+  height: 100%;
+}
+
+.margin {
+  text-align: center;
+  line-height: 36px;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.expand {
+  letter-spacing: 3px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  width: 960px;
+  flex-wrap: wrap;
+}
+
+#video {
+  width: 450px;
+  height: 300px;
+}
+.flex-col-l {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 450px;
+  margin: 0 13px;
+  border: dashed 1px #c8dd5d;
+}
+
+.flex-col-r {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 13px;
+  width: 450px;
+  flex: 0 0 auto;
+  border: dashed 1px #c8dd5d;
+}
+
+.block {
+  display: block;
+  text-align: center;
+  line-height: 36px;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.icon {
+  display: block;
+  text-align: center;
+  line-height: 36px;
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 960.98px) {
+  .container {
+    width: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .flex-row {
+    width: auto;
+  }
+
+  .flex-col-l {
+    order: 1;
+    margin-top: 5px;
+  }
+  .flex-col-r {
+    order: 0;
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 640.98px) {
+  .container {
+    flex: 1 0 auto;
+    margin: 20px 5px 0;
+    width: auto;
+    box-sizing: border-box;
+    border-right: 2px solid #12b0c9;
+    border-left: 2px solid #12b0c9;
+  }
+  .flex-col-l {
+    width: auto;
+  }
+  .flex-col-r {
+    width: auto;
+    margin-bottom: 20px;
+  }
+  #video {
+    width: 350px;
+    height: 200px;
+  }
+}

@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Rick and Morty - Word Guess</title>
+
+    <!--Google Fonts and Font Awesome Stylesheets-->
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Chelsea+Market&display=swap" rel="stylesheet" />
     <link
@@ -13,30 +15,71 @@
       integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
       crossorigin="anonymous"
     />
-    <title>Rick and Morty - Hangman</title>
+
+    <!--local stylesheets-->
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/tooltip.css" />
+    <link rel="stylesheet" href="assets/css/ui-keyboard.css" />
   </head>
   <body>
-    <header>
-      <span class="emphasis">Hangman</span>
+    <header class="header">
+      <div class="hangman">Hangman</div>
+      <div class="info">
+        <a href="color.html" target="_blank" class="info-link">
+          <i class="fas fa-info-circle"></i>
+        </a>
+      </div>
+      <div class="border"></div>
     </header>
-
     <div class="container">
-      <section class="aside">
-        <span class="block solution" id="solution"></span>
-        <iframe id="video" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
-      </section>
-
-      <section class="game-zone" id="game-zone">
-        <div class="margin" id="message">Press any key to get started <br /><i id="keyboard-icon" class="fas fa-keyboard" onclick="doLayout()"></i></div>
+      <div class="responsive-box">
+        <div class="margin" id="message">Press any key to get started</div>
         <div class="margin">Current Clue</div>
         <div class="margin expand" id="word">&nbsp;</div>
-        <div class="margin">Number of guesses remaining <span class="block" id="guesses-remaining">12</span></div>
-        <div class="margin">Letters already guessed <span id="letters-guessed"></span></div>
-        <div class="margin">Wins: <span id="wins">0</span></div>
-      </section>
-      <div class="flex-keyboard" id="keyboard"></div>
+        <div class="flex-row">
+          <div class="flex-col-l">
+            <iframe id="video" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
+          </div>
+          <div class="flex-col-r">
+            <div class="margin">
+              Letters already guessed
+              <span id="letters-guessed" class="block">&nbsp;</span>
+            </div>
+            <div class="margin">
+              Number of guesses remaining
+              <span class="block" id="guesses-remaining">12</span>
+            </div>
+            <div class="margin">
+              Wins:
+              <span id="wins">0</span>
+            </div>
+          </div>
+        </div>
+        <span class="icon"><i id="keyboard-icon" class="fas fa-keyboard" onclick="doLayout()"></i></span>
+
+        <div class="flex-keyboard" id="keyboard"></div>
+      </div>
     </div>
-    <!-- <button onclick="clearPage()">text</button> -->
-    <script type="text/javascript" src="assets/javascript/word-guess.js"></script>
+    <footer class="footer">
+      <div class="border-reverse"></div>
+      <a href="https://www.github.com/ejhalpin" class="logo">
+        <img src="assets/images/logos/GitHub.png" alt="GitHub" class="gh-logo" />
+      </a>
+      <a href="https://www.linkedin.com/in/eugene-halpin" class="logo">
+        <img src="assets/images/logos/In.png" alt="GitHub" class="in-logo" />
+      </a>
+      <div>
+        <i class="fab fa-git-alt" id="repo-icon">
+          <span class="tooltip">toggle repo link</span>
+        </i>
+        <span id="repo-link"></span>
+      </div>
+      <span class="footer-text">copyright &copy;</span>
+    </footer>
+    <script type="text/javascript" src="assets/javascript/interact.js"></script>
+    <script type="text/javascript" src="assets/javascript/ui-keyboard.js"></script>
+    <script type="text/javascript" src="assets/javascript/engine.js"></script>
   </body>
 </html>

@@ -1,0 +1,71 @@
+.header {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  background-image: url("../images/rm-logo.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: flex-end;
+  margin: 0 auto;
+}
+
+.hangman {
+  margin: 75px auto 0;
+
+  font-size: 4rem;
+  color: #f5f5f5;
+  text-shadow: 0 0 1px black, 0 0 5px #12b0c9, 0 0 8px #c8dd5d;
+}
+
+.info {
+  position: absolute;
+  color: #f5f5f5;
+  opacity: 0.8;
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.border {
+  width: 100%;
+  box-sizing: border-box;
+  height: 24px;
+  margin-top: 5px;
+  border-top: 1px solid #c8dd5d;
+  border-bottom: 1px solid #12b0c9;
+  margin-bottom: 10px;
+  background-image: linear-gradient(#c8dd5d, #12b0c9);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  padding: 1px;
+}
+
+a.info-link:hover {
+  text-shadow: 0 0 4px #252525;
+  opacity: 1;
+}
+
+a.info-link {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+
+@media only screen and (max-width: 640.98px) {
+  .header {
+    background-image: url("../images/rm-logo-sm.png");
+    height: 95px;
+  }
+  .hangman {
+    margin: 50px auto 0;
+    font-size: 2rem;
+    color: #f5f5f5;
+    text-shadow: 0 0 1px black, 0 0 5px #12b0c9, 0 0 8px #c8dd5d;
+  }
+}
