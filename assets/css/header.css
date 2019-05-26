@@ -1,71 +1,62 @@
-.header {
-  position: relative;
+.intro {
+  flex-grow: 1;
   width: 100%;
-  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  background-image: url("../images/rm-logo.png");
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  justify-content: flex-end;
   margin: 0 auto;
 }
 
-.hangman {
-  margin: 75px auto 0;
-
-  font-size: 4rem;
-  color: #f5f5f5;
-  text-shadow: 0 0 1px black, 0 0 5px #12b0c9, 0 0 8px #c8dd5d;
-}
-
-.info {
-  position: absolute;
-  color: #f5f5f5;
-  opacity: 0.8;
-  font-size: 1.25rem;
-  margin: 0;
-  padding: 0;
-}
-
-.border {
+.header {
+  height: 140px;
   width: 100%;
-  box-sizing: border-box;
-  height: 24px;
-  margin-top: 5px;
-  border-top: 1px solid #c8dd5d;
-  border-bottom: 1px solid #12b0c9;
-  margin-bottom: 10px;
-  background-image: linear-gradient(#c8dd5d, #12b0c9);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  padding: 1px;
+h1 {
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 6rem;
 }
 
-a.info-link:hover {
-  text-shadow: 0 0 4px #252525;
-  opacity: 1;
+.block {
+  display: block;
 }
 
-a.info-link {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
+.h3 {
+  font-size: 3rem;
 }
 
-@media only screen and (max-width: 640.98px) {
-  .header {
-    background-image: url("../images/rm-logo-sm.png");
-    height: 95px;
+#rm-logo {
+  width: 75vw;
+  height: 31.874vw;
+}
+
+#title {
+  transition: text-shadow 2s ease-in-out;
+  text-shadow: 0 0 0 #000000, 0 0 0 #12b0c9;
+}
+
+#title.active {
+  text-shadow: 0 0 4px #000000, 0 0 10px #12b0c9;
+}
+
+@media only screen and (max-width: 500px) {
+  body,
+  html {
+    font-size: 12px;
   }
-  .hangman {
-    margin: 50px auto 0;
-    font-size: 2rem;
-    color: #f5f5f5;
-    text-shadow: 0 0 1px black, 0 0 5px #12b0c9, 0 0 8px #c8dd5d;
+}
+
+@media only screen and (max-width: 420px) {
+  body,
+  html {
+    font-size: 10px;
   }
 }

@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Rick and Morty - Word Guess</title>
-
+    <!--jquery cdn-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.js"
+      integrity="sha256-1Cn7TdfHiMcEbTuku97ZRSGt2b3SvZftEIn68UMgHC8="
+      crossorigin="anonymous"
+    ></script>
     <!--Google Fonts and Font Awesome Stylesheets-->
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Chelsea+Market&display=swap" rel="stylesheet" />
@@ -15,71 +20,45 @@
       integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
       crossorigin="anonymous"
     />
-
     <!--local stylesheets-->
-    <link rel="stylesheet" href="assets/css/header.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/footer.css" />
-    <link rel="stylesheet" href="assets/css/tooltip.css" />
-    <link rel="stylesheet" href="assets/css/ui-keyboard.css" />
+    <link rel="stylesheet" href="assets/css/test.css" />
+    <link rel="stylesheet" href="assets/css/intro.css" />
+    <title>Document</title>
   </head>
   <body>
-    <header class="header">
-      <div class="hangman">Hangman</div>
-      <div class="info">
-        <a href="color.html" target="_blank" class="info-link">
-          <i class="fas fa-info-circle"></i>
-        </a>
-      </div>
-      <div class="border"></div>
-    </header>
-    <div class="container">
-      <div class="responsive-box">
-        <div class="margin" id="message">Press any key to get started</div>
-        <div class="margin">Current Clue</div>
-        <div class="margin expand" id="word">&nbsp;</div>
-        <div class="flex-row">
-          <div class="flex-col-l">
-            <iframe id="video" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
+    <div id="container">
+      <div id="intro-layer">
+        <div id="intro-box">
+          <img id="rm-logo" src="assets/images/rm-logo-ratio.png" />
+          <div id="intro-title">
+            <p class="h1">Hangman</p>
+            <p class="h2">--press any key to begin--</p>
           </div>
-          <div class="flex-col-r">
-            <div class="margin">
-              Letters already guessed
-              <span id="letters-guessed" class="block">&nbsp;</span>
-            </div>
-            <div class="margin">
-              Number of guesses remaining
-              <span class="block" id="guesses-remaining">12</span>
-            </div>
-            <div class="margin">
-              Wins:
-              <span id="wins">0</span>
+        </div>
+      </div>
+
+      <div id="header">
+        <div id="title">Hangman</div>
+      </div>
+      <div id="box">
+        <div class="messages">
+          <div id="messages"></div>
+        </div>
+        <div id="tv">
+          <div id="frame">
+            <div id="word"></div>
+            <div class="letters-guessed">
+              letters guessed
+              <span id="letters-guessed"></span>
             </div>
           </div>
         </div>
-        <span class="icon"><i id="keyboard-icon" class="fas fa-keyboard" onclick="doLayout()"></i></span>
-
-        <div class="flex-keyboard" id="keyboard"></div>
+      
+      <div id="stats">
+        <div>guesses <span id="guesses-remaining">12</span></div>
+        <div>wins <span id="wins">0</span></div>
       </div>
     </div>
-    <footer class="footer">
-      <div class="border-reverse"></div>
-      <a href="https://www.github.com/ejhalpin" class="logo">
-        <img src="assets/images/logos/GitHub.png" alt="GitHub" class="gh-logo" />
-      </a>
-      <a href="https://www.linkedin.com/in/eugene-halpin" class="logo">
-        <img src="assets/images/logos/In.png" alt="GitHub" class="in-logo" />
-      </a>
-      <div>
-        <i class="fab fa-git-alt" id="repo-icon">
-          <span class="tooltip">toggle repo link</span>
-        </i>
-        <span id="repo-link"></span>
-      </div>
-      <span class="footer-text">copyright &copy;</span>
-    </footer>
-    <script type="text/javascript" src="assets/javascript/interact.js"></script>
-    <script type="text/javascript" src="assets/javascript/ui-keyboard.js"></script>
-    <script type="text/javascript" src="assets/javascript/engine.js"></script>
+    <script src="assets/javascript/test.js"></script>
   </body>
 </html>

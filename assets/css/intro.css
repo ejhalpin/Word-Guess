@@ -1,0 +1,46 @@
+#intro-layer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/cropped-RM_page-header_background1-3.png");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  z-index: 300;
+  font-size: 1vw;
+}
+
+#rm-logo {
+  width: 60%;
+  height: calc(width / 1.817);
+  opacity: inherit;
+}
+#intro-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+}
+#intro-title {
+  text-align: center;
+  opacity: inherit;
+}
+
+.h1 {
+  font-size: 10em;
+  margin: -15vw 0 0 0;
+  padding: 0;
+  text-shadow: -1px -1px 2px #297060, 1px -1px 2px #297060, -1px 1px 2px #297060, 1px 1px 2px #297060, 2px 2px 4px #12b0c9, -2px 2px 4px #12b0c9,
+    -2px -2px 4px #12b0c9, 2px -2px 4px #12b0c9, 4px 4px 8px #c8dd5d, -4px 4px 8px #c8dd5d, 4px -4px 8px #c8dd5d, -4px -4px 8px #c8dd5d;
+}
+
+.h2 {
+  font-size: 6em;
+  margin: 0;
+}
